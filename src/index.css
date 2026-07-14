@@ -1,0 +1,42 @@
+@import "tailwindcss";
+.lo{text-decoration: overline;}
+body{background-image:url(image/Pink\ &\ Blue\ Illustration\ School\ Background\ Poster.jpg) ;width: 100vw;height: 100vh; object-fit: cover;background-position: center; background-size: cover;}
+.todoline{background-image: url(image/donline.png); overflow-x: scroll;scrollbar-width: none;}
+.l{background-image: url(image/editbgre.png);}
+
+.animate-left{
+    animation: revealLeft 6s cubic-bezier(.19,1,.22,1) forwards;
+    opacity:0;
+}
+
+.bl{animation: inbl 3s ;}
+@keyframes inbl{
+    0%{
+        filter: blur(12px);
+        filter:invert(50);
+    }
+    100%{
+        filter: blur(0);
+        filter: invert(0);
+    }
+}
+@keyframes revealLeft{
+
+    0%{
+        opacity:0;
+        transform:translateX(-180px);
+        filter:blur(12px);
+    }
+
+    60%{
+        opacity:1;
+        transform:translateX(15px);
+        filter:blur(0);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
