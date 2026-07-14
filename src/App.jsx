@@ -246,7 +246,7 @@ const onsubmit = async (data) => {
 
         <img
 
-          src="src/image/hero.png"
+          src="/image/hero.png"
 
           className="w-[520px]
           h-[300px]
@@ -644,7 +644,7 @@ const onsubmit = async (data) => {
         
           <img
 
-          src="src/image/velix.png"
+          src="/image/velix.png"
 
           className="
           lg:w-150 w-60
@@ -727,7 +727,7 @@ const onsubmit = async (data) => {
 
         <img
 
-          src="src/image/cafe.png"
+          src="/image/cafe.png"
 
           className="
           lg:w-150 w-60
@@ -808,7 +808,7 @@ const onsubmit = async (data) => {
 
         <img
 
-          src="src/image/st.png"
+          src="/image/st.png"
 
           className="
           lg:w-150 w-60
@@ -926,7 +926,7 @@ const onsubmit = async (data) => {
 
         <img
 
-          src="src/image/po1.png"
+          src="/image/po1.png"
 
           className="
           lg:w-150 w-60
@@ -1008,7 +1008,7 @@ const onsubmit = async (data) => {
 
         <img
 
-          src="src/image/po2.png"
+          src="/image/po2.png"
 
           className="
           lg:w-150 w-60
