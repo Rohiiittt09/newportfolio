@@ -348,8 +348,8 @@ const onsubmit = async (data) => {
 
         "
         >
-          Hi, I'm Rohit, a self-taught Full Stack Web Developer passionate about building modern, responsive, and scalable web applications. I have hands-on experience with HTML, CSS, JavaScript, Tailwind CSS, React, Next.js, Node.js, Express.js, MongoDB, WebSockets, and authentication using JWT & NextAuth. I enjoy solving real-world problems through code and continuously learning new technologies. Currently, I'm seeking a Junior Web Developer or Full Stack Internship where I can contribute to real projects, learn from experienced developers, and grow my technical skills.
-          </p>
+    Hi, I'm Rohit, a self-taught Full Stack Web Developer passionate about building modern, responsive, and scalable web applications. I work with React, Next.js, Node.js, Express.js, MongoDB, and modern web technologies to create user-focused digital experiences. I'm currently seeking Frontend Developer, Full Stack Developer Internship, or Junior Web Developer opportunities where I can contribute to real-world projects, collaborate with experienced developers, and continue growing my technical skills.
+  </p>
   </div>
 
 
