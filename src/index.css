@@ -3,7 +3,9 @@
 body{background-image:url(image/Pink\ &\ Blue\ Illustration\ School\ Background\ Poster.jpg) ;width: 100vw;height: 100vh; object-fit: cover;background-position: center; background-size: cover;}
 .todoline{background-image: url(image/donline.png); overflow-x: scroll;scrollbar-width: none;}
 .l{background-image: url(image/editbgre.png);}
-
+html {
+  scroll-behavior: smooth;
+}
 .animate-left{
     animation: revealLeft 6s cubic-bezier(.19,1,.22,1) forwards;
     opacity:0;

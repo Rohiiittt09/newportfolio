@@ -1,8 +1,94 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+
+gsap.registerPlugin(ScrollTrigger)
+
 
 function App() {
+  const scrollRef = useRef();
   const [count, setCount] = useState(0);
+
+
+  useGSAP(()=>{
+    gsap.from("#bb",{
+      x:-400,
+      duration:7,
+      ease:"bounce",
+      scrollTrigger:{
+        trigger:"#bb",
+        start:"top 95%",
+        
+      }
+    })
+    gsap.from("#bb1",{
+      x:-400,
+      duration:7,
+      ease:"bounce",
+      scrollTrigger:{
+        trigger:"#bb1",
+        start:"top 95%",
+        
+      }
+    })
+    gsap.from("#bb2",{
+      x:-400,
+      duration:7,
+      ease:"bounce",
+      scrollTrigger:{
+        trigger:"#bb2",
+        start:"top 95%",
+        
+      }
+    })
+    gsap.from("#bb3",{
+      x:-400,
+      duration:7,
+      ease:"bounce",
+      scrollTrigger:{
+        trigger:"#bb3",
+        start:"top 95%",
+        
+      }
+    })
+    gsap.from("#bb4",{
+      x:-400,
+      duration:7,
+      ease:"bounce",
+      scrollTrigger:{
+        trigger:"#bb4",
+        start:"top 95%",
+        
+      }
+    })
+    gsap.from("#nav",{
+      y:-20,
+      opacity:0,
+      delay:2,
+      duration:2,
+      ease:"bounce.out"
+    })
+    gsap.fromTo("#an",{
+      opacity:0,},{opacity:1,stagger:0.002,scrollTrigger:{
+        trigger:"#an",
+        top:"top 90%",
+        end:"bottom 20%",
+        scrub:true,
+
+      }})
+  },[])
+  const a = "Hi, I'm Rohit, a self-taught Full Stack Web Developer passionate about building modern, responsive, and scalable web applications. I have hands-on experience with HTML, CSS, JavaScript, Tailwind CSS, React, Next.js, Node.js, Express.js, MongoDB, WebSockets, and authentication using JWT & NextAuth. I enjoy solving real-world problems through code and continuously learning new technologies. Currently, I'm seeking a Junior Web Developer or Full Stack Internship where I can contribute to real projects, learn from experienced developers, and grow my technical skills."
+          
+  useEffect(() => {
+     
+   
+   a.split("").map((e)=>{
+    console.log(e)
+   })
+  }, [])
+  
   const onsubmit = async (data) => {
     const msg = `
         name:${data.name}
@@ -47,7 +133,7 @@ function App() {
           </svg>
         </a>
       </div>
-      <nav
+      <nav id="nav"
         className="fixed   top-6 left-1/2 -translate-x-1/2 z-50
     bg-black/50 backdrop-blur-xl
     border border-red-900/40
@@ -314,15 +400,18 @@ function App() {
           </h1>
         </div>
         <div className=" w-full p-5 md:p-0 md:w-4/6  md:mt-10 mx-auto   ">
-          <p
+          <p ref={scrollRef}
             className="uppercase text-center w-full text-[12px] md:text-[18px] 
         text-red-500
         mb-6
 
         "
         >
-          Hi, I'm Rohit, a self-taught Full Stack Web Developer passionate about building modern, responsive, and scalable web applications. I have hands-on experience with HTML, CSS, JavaScript, Tailwind CSS, React, Next.js, Node.js, Express.js, MongoDB, WebSockets, and authentication using JWT & NextAuth. I enjoy solving real-world problems through code and continuously learning new technologies. Currently, I'm seeking a Junior Web Developer or Full Stack Internship where I can contribute to real projects, learn from experienced developers, and grow my technical skills.
-          </p>
+          {
+            a.split("").map((e,i)=>{
+              return <span id="an" key={i}>{e}</span>
+            })
+          }</p>
   </div>
 
         <div
@@ -644,8 +733,8 @@ function App() {
                 Live Demo
               </a>
             </div>
-            <a href="https://velixchat.netlify.app/">
-              <div className=" absolute   lg:-right-130 rounded-2xl mx-auto lg:top-9 -top-10  ">
+            <a  href="https://velixchat.netlify.app/">
+              <div id="bb" className=" absolute   lg:-right-130 rounded-2xl mx-auto lg:top-9 -top-10  ">
                 <div
                   className="relative  
       flex
@@ -725,7 +814,7 @@ function App() {
               </a>
             </div>
             <a href="https://universalxcafefullstackk.vercel.app/">
-              <div className=" absolute   lg:-right-130 rounded-2xl mx-auto lg:top-9 -top-10 ">
+              <div id="bb1" className=" absolute   lg:-right-130 rounded-2xl mx-auto lg:top-9 -top-10 ">
                 <div
                   className="relative  
       flex
@@ -803,7 +892,7 @@ function App() {
               </a>
             </div>
             <a href="https://elivatestudio.netlify.app/">
-              <div className=" absolute   lg:-right-130 rounded-2xl mx-auto lg:top-9 -top-10 ">
+              <div id="bb2"  className=" absolute   lg:-right-130 rounded-2xl mx-auto lg:top-9 -top-10 ">
                 <div
                   className="relative  
       flex
@@ -916,7 +1005,7 @@ function App() {
               </a>
             </div>
             <a href="https://riyabansalportfolioo.netlify.app/">
-              <div className=" absolute   lg:-right-130 rounded-2xl mx-auto lg:top-9 -top-10 ">
+              <div id="bb3"  className=" absolute   lg:-right-130 rounded-2xl mx-auto lg:top-9 -top-10 ">
                 <div
                   className="relative  
       flex
@@ -994,7 +1083,7 @@ function App() {
               </a>
             </div>
             <a href="https://namankuradiaportfolio.netlify.app">
-              <div className=" absolute   lg:-right-130 rounded-2xl mx-auto lg:top-9 -top-10 ">
+              <div id="bb4"  className=" absolute   lg:-right-130 rounded-2xl mx-auto lg:top-9 -top-10 ">
                 <div
                   className="relative  
       flex
